@@ -121,7 +121,7 @@ const Footer = () => {
             <div className="flex items-center space-x-6">
               <div className="flex space-x-6 text-sm">
                 <button onClick={() => window.location.href = '/privacy-policy'} className="text-slate-500 hover:text-amber-400 transition-colors">Privacy Policy</button>
-                <button onClick={() => window.location.href = '/privacy-policy'} className="text-slate-500 hover:text-amber-400 transition-colors">Terms of Service</button>
+                <button onClick={() => window.location.href = '/terms'} className="text-slate-500 hover:text-amber-400 transition-colors">Terms of Service</button>
               </div>
               <button
                 onClick={scrollToTop}
