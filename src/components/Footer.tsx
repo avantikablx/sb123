@@ -119,10 +119,15 @@ const Footer = () => {
               © 2025 StraightBooks. All rights reserved. Registered in the UK.
             </div>
             <div className="flex items-center space-x-6">
-              <div className="flex space-x-6 text-sm">
-                <button onClick={() => window.location.href = '/privacy-policy'} className="text-slate-500 hover:text-amber-400 transition-colors">Privacy Policy</button>
-                <button onClick={() => window.location.href = '/terms'} className="text-slate-500 hover:text-amber-400 transition-colors">Terms of Service</button>
-              </div>
+              
+            <div className="flex space-x-6 text-sm">
+              <Link to="/privacy-policy" className="text-slate-500 hover:text-amber-400 transition-colors">
+                  Privacy Policy
+              </Link>
+              <Link to="/terms-of-service" className="text-slate-500 hover:text-amber-400 transition-colors">
+                Terms of Service
+              </Link>
+            </div>
               <button
                 onClick={scrollToTop}
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors group border border-amber-500/20"
