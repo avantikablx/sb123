@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Phone, Mail, Send, Clock } from 'lucide-react';
 
 const Contact = () => {
@@ -31,6 +31,9 @@ ${formData.message}
     });
   };
 
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <section id="contact" className="py-24 bg-[#0C203B]">
       <div className="max-w-7xl mx-auto px-6">
