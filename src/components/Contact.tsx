@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, Mail, Send, Clock } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,21 +10,29 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = `New Inquiry from ${formData.name}`;
-    const body = `
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-Message:
-${formData.message}
-    `;
-    
-    window.location.href = `mailto:Contact@straightbooks.co.uk?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
+ const templateParams = {
+  from_name: formData.name,
+  from_email: formData.email,
+  phone: formData.phone,
+  message: formData.message,
+};
+console.log("Sending params to EmailJS:", templateParams);
 
+  emailjs
+    .send('service_sjun8my', 'template_8m1hg2d', templateParams, 'qQuQx2yDXoTjTHwgj')
+    .then(() => {
+      alert('Message sent successfully!');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    })
+    .catch((error) => {
+      alert('Message failed to send. Please try again later.');
+      console.error(error);
+    });
+};
+  // 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -53,8 +62,8 @@ ${formData.message}
             Ready to get started? Get in touch with our team for your free consultation.
           </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-16">
+ {/* <div className="grid lg:grid-cols-2 gap-16"></div> */}
+        <div className="flex items-center justify-center">
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-8">Get In Touch</h3>
@@ -109,7 +118,7 @@ ${formData.message}
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20">
+          {/* <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-amber-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -117,6 +126,7 @@ ${formData.message}
                 <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
                   Name *
                 </label>
+              
                 <input
                   type="text"
                   id="name"
@@ -164,6 +174,8 @@ ${formData.message}
                 <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
                   Message *
                 </label>
+             
+
                 <textarea
                   id="message"
                   name="message"
@@ -184,7 +196,7 @@ ${formData.message}
                 Send Message
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
