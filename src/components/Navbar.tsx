@@ -10,11 +10,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-4">
-          <img
-            src="/Logo.jpg"
-            alt="StraightBooks Logo"
-            className="h-12 w-auto rounded-lg shadow-lg"
-          />
+         <img
+  src="/Logo.jpg"
+  alt="StraightBooks Logo"
+  className="h-10 sm:h-12 w-auto rounded-lg shadow-lg"
+/>
           <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-orange-300 bg-clip-text text-transparent">
             StraightBooks
           </span>

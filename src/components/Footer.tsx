@@ -41,7 +41,7 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors group border border-amber-500/20">
                 <Linkedin className="h-5 w-5 text-slate-400 group-hover:text-white" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors group border border-amber-500/20">
+              <a href="https://www.instagram.com/straightbooks" className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-600 transition-colors group border border-amber-500/20">
                 <Instagram className="h-5 w-5 text-slate-400 group-hover:text-white" />
               </a>
             </div>
