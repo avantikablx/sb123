@@ -1,4 +1,4 @@
-import { Globe, Shield, Users, Award, TrendingUp, CheckCircle, User, Target, Handshake, Star, ArrowRight, Crown } from 'lucide-react';
+import { Globe, Shield, Users, Award, TrendingUp, CheckCircle, User, Target, Handshake, Star, ArrowRight, Crown, UserCheck } from 'lucide-react';
 
 const About = () => {
   return (
@@ -45,21 +45,29 @@ const About = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Globe className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="text-xl sm:text-2xl font-bold text-white">500+</div>
-                <div className="text-xs sm:text-sm text-slate-400">Happy Clients</div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Global Team</h4>
+                <p className="text-xs text-slate-400">UK, India & Ireland professionals</p>
               </div>
               
-              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="text-xl sm:text-2xl font-bold text-white">98%</div>
-                <div className="text-xs sm:text-sm text-slate-400">Success Rate</div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">UK Compliant</h4>
+                <p className="text-xs text-slate-400">Companies House registered</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                </div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">SME Focused</h4>
+                <p className="text-xs text-slate-400">Built for startups & SMEs</p>
               </div>
             </div>
           </div>
