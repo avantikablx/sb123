@@ -98,14 +98,15 @@ const Services = () => {
                     return '/bookkeeping';
                   case 'VAT Registration & Filing':
                     return '/vat';
-                  case 'Corporation Tax Returns':
-                    return '/corporation-tax';
-                  case 'Payroll (PAYE) Management':
-                    return '/payroll';
-                  case 'Self-Assessment Filing':
-                    return '/self-assessment';
-                  case 'Limited Company Formation & Compliance':
-                    return '/company-formation';
+                  // Temporarily disabled other core services
+                  // case 'Corporation Tax Returns':
+                  //   return '/corporation-tax';
+                  // case 'Payroll (PAYE) Management':
+                  //   return '/payroll';
+                  // case 'Self-Assessment Filing':
+                  //   return '/self-assessment';
+                  // case 'Limited Company Formation & Compliance':
+                  //   return '/company-formation';
                   default:
                     return '#';
                 }
@@ -113,6 +114,7 @@ const Services = () => {
 
               const serviceRoute = getServiceRoute(service.title);
               const isClickable = serviceRoute !== '#';
+              const showLearnMore = true; // Always show "Learn more" text
               
               const ServiceCard = (
                 <div className={`group p-8 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full flex flex-col ${isClickable ? 'cursor-pointer' : ''}`}>
@@ -121,7 +123,7 @@ const Services = () => {
                   </div>
                   <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
                   <p className="text-slate-400 leading-relaxed flex-grow">{service.description}</p>
-                  {isClickable && (
+                  {showLearnMore && (
                     <div className="mt-4 text-amber-400 text-sm font-medium group-hover:text-amber-300">
                       Learn more →
                     </div>
