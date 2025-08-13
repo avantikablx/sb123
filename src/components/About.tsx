@@ -1,4 +1,4 @@
-import { Globe, Shield, Users, Award, TrendingUp, CheckCircle, User, Target, Handshake, Star, ArrowRight, Crown } from 'lucide-react';
+import { Globe, Shield, Users, Award, TrendingUp, CheckCircle, Target, Handshake, Star, ArrowRight, Crown } from 'lucide-react';
 
 const About = () => {
   return (
@@ -12,21 +12,21 @@ const About = () => {
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-amber-500/30 mb-6 sm:mb-8">
             <Award className="h-4 w-4 sm:h-5 sm:w-5 text-amber-400" />
             <span className="text-xs sm:text-sm font-medium text-slate-200">About StraightBooks</span>
-          </div>
-          
+            </div>
+            
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 leading-tight px-2 sm:px-0">
             <span className="bg-gradient-to-r from-white via-amber-100 to-slate-300 bg-clip-text text-transparent">
-              About Us
-            </span>
-          </h2>
-          
+                About Us
+              </span>
+            </h2>
+            
           <div className="max-w-4xl mx-auto px-2 sm:px-0">
             <p className="text-lg sm:text-xl lg:text-2xl text-slate-300 leading-relaxed mb-6 sm:mb-8">
-              Straightbooks was founded with a simple mission: to give business owners the kind of accounting support we always wished we had.
-            </p>
+                Straightbooks was founded with a simple mission: to give business owners the kind of accounting support we always wished we had.
+              </p>
             <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
-              We're a team of three entrepreneurs from different corners of the world, each of us having built and grown our own profitable businesses — and each of us having faced the same frustrating challenge: dealing with accountants who overcharged, under-delivered, or simply didn't understand the needs of business owners.
-            </p>
+                We're a team of three entrepreneurs from different corners of the world, each of us having built and grown our own profitable businesses — and each of us having faced the same frustrating challenge: dealing with accountants who overcharged, under-delivered, or simply didn't understand the needs of business owners.
+              </p>
           </div>
         </div>
 
@@ -41,32 +41,40 @@ const About = () => {
                 </p>
                 <p className="text-base sm:text-lg leading-relaxed">
                   Someone who gets your goals, works proactively, and communicates clearly.
-                </p>
-              </div>
+              </p>
             </div>
-            
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <Users className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+          </div>
+          
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Globe className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="text-xl sm:text-2xl font-bold text-white">500+</div>
-                <div className="text-xs sm:text-sm text-slate-400">Happy Clients</div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">Global Team</h4>
+                <p className="text-xs text-slate-400">UK, India & Ireland professionals</p>
               </div>
               
-              <div className="bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="text-xl sm:text-2xl font-bold text-white">98%</div>
-                <div className="text-xs sm:text-sm text-slate-400">Success Rate</div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">UK Compliant</h4>
+                <p className="text-xs text-slate-400">Companies House registered</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 border border-amber-500/20 text-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                </div>
+                <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">SME Focused</h4>
+                <p className="text-xs text-slate-400">Built for startups & SMEs</p>
               </div>
             </div>
           </div>
           
           <div className="relative order-1 lg:order-2 h-full">
             <div className="relative group h-full flex flex-col">
-              <img
+              <img 
                 src="https://danptaxsolution.com/wp-content/uploads/2022/10/man-analysis-business-accounting-laptop-45719380.jpg"
                 alt="International accounting team"
                 className="w-full h-64 sm:h-80 lg:h-full object-cover rounded-xl sm:rounded-2xl shadow-2xl border border-amber-500/30 flex-grow"
@@ -78,10 +86,10 @@ const About = () => {
                 <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center">
                     <Star className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-white text-sm sm:text-base lg:text-lg">98% Success Rate</div>
-                    <div className="text-xs sm:text-sm text-slate-400">Client Satisfaction</div>
+                </div>
+                <div>
+                    <div className="font-bold text-white text-sm sm:text-base lg:text-lg drop-shadow-md" style={{textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)'}}>98% Success Rate</div>
+                    <div className="text-xs sm:text-sm text-slate-400 drop-shadow-sm" style={{textShadow: '1px 1px 2px rgba(0, 0, 0, 0.6)'}}>Client Satisfaction</div>
                   </div>
                 </div>
               </div>
@@ -98,9 +106,9 @@ const About = () => {
             </div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
               <span className="bg-gradient-to-r from-white via-amber-100 to-slate-300 bg-clip-text text-transparent">
-                Meet the Founders
-              </span>
-            </h3>
+              Meet the Founders
+            </span>
+          </h3>
             <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto px-4 sm:px-0">
               Three entrepreneurs from around the world, united by a common vision
             </p>
@@ -144,9 +152,9 @@ const About = () => {
                     <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mb-6 sm:mb-8"></div>
                     
                     <p className="text-slate-200 leading-relaxed text-base sm:text-lg lg:text-xl max-w-4xl mx-auto font-light px-2 sm:px-0">
-                      Originally from Ireland and now based in Spain, Jack has built a successful business in a competitive international market and brings a sharp eye for detail and client-focused service.
-                    </p>
-                  </div>
+                Originally from Ireland and now based in Spain, Jack has built a successful business in a competitive international market and brings a sharp eye for detail and client-focused service.
+              </p>
+            </div>
                 </div>
               </div>
             </div>
@@ -187,9 +195,9 @@ const About = () => {
                     <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-6 sm:mb-8"></div>
                     
                     <p className="text-slate-200 leading-relaxed text-base sm:text-lg lg:text-xl max-w-4xl mx-auto font-light px-2 sm:px-0">
-                      An experienced entrepreneur from England, Daniel knows what it takes to build a thriving UK-based company — and the headaches that come with confusing tax processes and inconsistent advice.
-                    </p>
-                  </div>
+                An experienced entrepreneur from England, Daniel knows what it takes to build a thriving UK-based company — and the headaches that come with confusing tax processes and inconsistent advice.
+              </p>
+            </div>
                 </div>
               </div>
             </div>
@@ -230,10 +238,10 @@ const About = () => {
                     <div className="w-16 sm:w-24 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mb-6 sm:mb-8"></div>
                     
                     <p className="text-slate-200 leading-relaxed text-base sm:text-lg lg:text-xl max-w-4xl mx-auto font-light px-2 sm:px-0">
-                      Hailing from India, Raghav has launched and grown a profitable business in one of the world's most dynamic economies. He understands the value of clarity, precision, and trustworthy accounting.
-                    </p>
-                  </div>
-                </div>
+                Hailing from India, Raghav has launched and grown a profitable business in one of the world's most dynamic economies. He understands the value of clarity, precision, and trustworthy accounting.
+              </p>
+            </div>
+          </div>
               </div>
             </div>
           </div>
@@ -244,9 +252,9 @@ const About = () => {
           <div className="text-center mb-12 sm:mb-16">
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
               <span className="bg-gradient-to-r from-white via-amber-100 to-slate-300 bg-clip-text text-transparent">
-                What We Stand For
-              </span>
-            </h3>
+              What We Stand For
+            </span>
+          </h3>
             <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto px-4 sm:px-0">
               Our core values that drive everything we do
             </p>
@@ -265,12 +273,12 @@ const About = () => {
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <Target className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-                  </div>
-                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center">Transparency</h4>
-                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow">
-                    You'll always know what you're paying for. No hidden fees. No confusing fine print.
-                  </p>
-                </div>
+              </div>
+                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}>Transparency</h4>
+                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow drop-shadow-md" style={{textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)'}}>
+                You'll always know what you're paying for. No hidden fees. No confusing fine print.
+              </p>
+            </div>
               </div>
             </div>
             
@@ -286,12 +294,12 @@ const About = () => {
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <TrendingUp className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-                  </div>
-                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center">Performance</h4>
-                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow">
-                    We treat your accounts like we would our own — with accuracy, speed, and strategic thinking.
-                  </p>
-                </div>
+              </div>
+                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}>Performance</h4>
+                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow drop-shadow-md" style={{textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)'}}>
+                We treat your accounts like we would our own — with accuracy, speed, and strategic thinking.
+              </p>
+            </div>
               </div>
             </div>
             
@@ -307,13 +315,13 @@ const About = () => {
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-amber-500 to-orange-400 rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform shadow-lg">
                     <Handshake className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-                  </div>
-                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center">Partnership</h4>
-                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow">
-                    We're not just number-crunchers. We're your advisors, sounding boards, and problem solvers.
-                  </p>
-                </div>
               </div>
+                  <h4 className="font-bold text-white mb-3 sm:mb-4 text-lg sm:text-xl text-center drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}>Partnership</h4>
+                  <p className="text-slate-300 leading-relaxed text-center text-sm sm:text-base flex-grow drop-shadow-md" style={{textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)'}}>
+                We're not just number-crunchers. We're your advisors, sounding boards, and problem solvers.
+              </p>
+            </div>
+          </div>
             </div>
           </div>
           

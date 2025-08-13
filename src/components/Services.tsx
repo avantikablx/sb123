@@ -1,4 +1,5 @@
 import { BookOpen, FileText, Calculator, Users, Building, CreditCard, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const mainServices = [
@@ -89,15 +90,55 @@ const Services = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Core Services</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {mainServices.map((service, index) => (
-              <div key={index} className="group p-8 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className="h-8 w-8 text-white" />
+            {mainServices.map((service, index) => {
+              // Create route mapping for each service
+              const getServiceRoute = (title: string) => {
+                switch (title) {
+                  case 'Bookkeeping':
+                    return '/bookkeeping';
+                  case 'VAT Registration & Filing':
+                    return '/vat';
+                  case 'Corporation Tax Returns':
+                    return '/corporation-tax';
+                  case 'Payroll (PAYE) Management':
+                    return '/payroll';
+                  case 'Self-Assessment Filing':
+                    return '/self-assessment';
+                  case 'Limited Company Formation & Compliance':
+                    return '/company-formation';
+                  default:
+                    return '#';
+                }
+              };
+
+              const serviceRoute = getServiceRoute(service.title);
+              const isClickable = serviceRoute !== '#';
+              
+              const ServiceCard = (
+                <div className={`group p-8 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-amber-500/20 hover:border-amber-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full flex flex-col ${isClickable ? 'cursor-pointer' : ''}`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
+                  <p className="text-slate-400 leading-relaxed flex-grow">{service.description}</p>
+                  {isClickable && (
+                    <div className="mt-4 text-amber-400 text-sm font-medium group-hover:text-amber-300">
+                      Learn more →
+                    </div>
+                  )}
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
-                <p className="text-slate-400 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
+              );
+
+              return isClickable ? (
+                <Link key={index} to={serviceRoute}>
+                  {ServiceCard}
+                </Link>
+              ) : (
+                <div key={index}>
+                  {ServiceCard}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -105,15 +146,49 @@ const Services = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Optional Add-Ons</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            {addOnServices.map((service, index) => (
-              <div key={index} className="group p-8 rounded-2xl bg-slate-700/30 backdrop-blur-sm border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:transform hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className="h-8 w-8 text-white" />
+            {addOnServices.map((service, index) => {
+              // Create route mapping for add-on services
+              const getAddOnRoute = (title: string) => {
+                switch (title) {
+                  case 'Registered UK Address':
+                    return '/uk-address';
+                  case 'Virtual CFO Services':
+                    return '/virtual-cfo';
+                  case 'Business Bank Account Setup':
+                    return '/bank-account';
+                  default:
+                    return '#';
+                }
+              };
+
+              const serviceRoute = getAddOnRoute(service.title);
+              const isClickable = serviceRoute !== '#';
+              
+              const AddOnCard = (
+                <div className={`group p-8 rounded-2xl bg-slate-700/30 backdrop-blur-sm border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 hover:transform hover:scale-105 h-full flex flex-col ${isClickable ? 'cursor-pointer' : ''}`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <service.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
+                  <p className="text-slate-400 leading-relaxed flex-grow">{service.description}</p>
+                  {isClickable && (
+                    <div className="mt-4 text-amber-400 text-sm font-medium group-hover:text-amber-300">
+                      Learn more →
+                    </div>
+                  )}
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4">{service.title}</h4>
-                <p className="text-slate-400 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
+              );
+
+              return isClickable ? (
+                <Link key={index} to={serviceRoute}>
+                  {AddOnCard}
+                </Link>
+              ) : (
+                <div key={index}>
+                  {AddOnCard}
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -128,8 +203,8 @@ const Services = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent rounded-2xl"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
-                <h4 className="text-2xl font-bold text-white mb-2">Professional Excellence</h4>
-                <p className="text-slate-300">Delivering quality accounting services you can trust</p>
+                <h4 className="text-2xl font-bold text-white mb-2 drop-shadow-lg" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'}}>Professional Excellence</h4>
+                <p className="text-slate-300 drop-shadow-md" style={{textShadow: '1px 1px 3px rgba(0, 0, 0, 0.7)'}}>Delivering quality accounting services you can trust</p>
               </div>
             </div>
           </div>

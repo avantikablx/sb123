@@ -34,7 +34,6 @@ const Navbar = () => {
           >
             About Us
           </Link>
-          {/* <Link to="/services" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Services</Link> */}
           <Link
             to="/pricing"
             className="text-slate-300 hover:text-amber-400 transition-colors font-medium"
@@ -96,7 +95,6 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            {/* <Link to="/services" onClick={() => setIsMenuOpen(false)} className="block w-full text-left text-slate-300 hover:text-amber-400 font-medium">Services</Link> */}
             <Link
               to="/pricing"
               onClick={() => setIsMenuOpen(false)}
