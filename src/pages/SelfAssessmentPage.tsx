@@ -1,106 +1,64 @@
-import { FileText, Calculator, Calendar, TrendingUp, Shield, CheckCircle2, Clock, ArrowLeft, Target, Users, Award, BookOpen } from 'lucide-react';
+import { FileText, Calculator, Calendar, TrendingUp, Shield, CheckCircle2, Clock, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const SelfAssessmentPage = () => {
   const selfAssessmentFeatures = [
     {
       icon: FileText,
-      title: 'Complete Tax Return Preparation',
-      description: 'Professional preparation of your self-assessment tax return.',
-      details: 'Comprehensive preparation of SA100 returns including all necessary supplementary pages, ensuring accurate reporting of all income sources and allowable deductions.',
+      title: 'End-to-End Return Management',
+      description: 'Complete preparation and submission of your self-assessment tax return with absolute accuracy.',
       gradient: 'from-orange-600 to-amber-500'
     },
     {
       icon: Calculator,
-      title: 'Tax Calculation & Planning',
-      description: 'Accurate calculation of your tax liability and strategic planning.',
-      details: 'Detailed tax calculations including income tax, National Insurance, and capital gains tax, with strategic advice to minimize your overall tax burden.',
+      title: 'Income & Expense Analysis',
+      description: 'Detailed review of all income sources and allowable expenses to ensure correct reporting.',
       gradient: 'from-amber-500 to-orange-600'
     },
     {
-      icon: Calendar,
-      title: 'Deadline Management',
-      description: 'Never miss important self-assessment deadlines.',
-      details: 'Proactive deadline management ensuring your return is filed by 31st January, with reminders for payment on account and balancing payments.',
+      icon: TrendingUp,
+      title: 'Tax Optimisation Strategies',
+      description: 'Expert guidance to legitimately reduce liabilities through reliefs, allowances, and deductions.',
       gradient: 'from-orange-500 to-amber-600'
     },
     {
-      icon: TrendingUp,
-      title: 'Capital Gains Tax',
-      description: 'Expert handling of capital gains and losses.',
-      details: 'Specialized advice on capital gains tax calculations, annual exemptions, reliefs available, and strategic timing of disposals.',
+      icon: Calendar,
+      title: 'Complex Income Handling',
+      description: 'Specialised support for investments, property income, foreign earnings, dividends, and more.',
       gradient: 'from-amber-600 to-orange-500'
     },
     {
-      icon: Shield,
-      title: 'HMRC Correspondence',
-      description: 'Professional representation for HMRC enquiries.',
-      details: 'Expert handling of HMRC correspondence, enquiries, and investigations, providing professional representation throughout the process.',
+      icon: Clock,
+      title: 'Deadline & Penalty Protection',
+      description: 'Proactive scheduling to avoid late filing charges or interest.',
       gradient: 'from-orange-600 to-amber-600'
     },
     {
-      icon: CheckCircle2,
-      title: 'Record Keeping Advice',
-      description: 'Guidance on maintaining proper tax records.',
-      details: 'Comprehensive advice on record keeping requirements, digital records, and ensuring you have the documentation needed for your tax return.',
+      icon: Shield,
+      title: 'HMRC Liaison',
+      description: 'Direct communication with HMRC on queries, amendments, or compliance checks.',
       gradient: 'from-amber-500 to-orange-500'
+    },
+    {
+      icon: CheckCircle2,
+      title: 'Audit-Ready Documentation',
+      description: 'Fully organised records to support all figures in the return.',
+      gradient: 'from-orange-500 to-amber-400'
+    },
+    {
+      icon: FileText,
+      title: 'Tailored Solutions',
+      description: 'Filing strategies customised for business owners, contractors, high-net-worth individuals, and freelancers.',
+      gradient: 'from-amber-600 to-orange-400'
     }
   ];
 
-  const benefits = [
-    {
-      icon: Clock,
-      title: 'Meet Deadlines',
-      description: 'Never face penalties with our proactive deadline management.'
-    },
-    {
-      icon: Target,
-      title: 'Maximize Deductions',
-      description: 'Ensure you claim all allowable expenses and reliefs.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Advice',
-      description: 'Qualified tax advisors with extensive experience.'
-    },
-    {
-      icon: Award,
-      title: 'Quality Service',
-      description: 'Professional service with attention to detail.'
-    }
-  ];
 
-  const clientTypes = [
-    {
-      title: 'Company Directors',
-      description: 'Specialized returns for directors with complex income structures'
-    },
-    {
-      title: 'Sole Traders & Freelancers',
-      description: 'Business income reporting and expense optimization'
-    },
-    {
-      title: 'Property Investors',
-      description: 'Rental income reporting and property-related deductions'
-    },
-    {
-      title: 'Investment Income',
-      description: 'Dividends, interest, and investment gains reporting'
-    },
-    {
-      title: 'Multiple Income Sources',
-      description: 'Complex returns with various income streams'
-    },
-    {
-      title: 'High Net Worth Individuals',
-      description: 'Sophisticated tax planning for substantial assets'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Hero Section with Back Navigation */}
-      <section className="py-24 bg-[#0C203B] relative overflow-hidden">
+      <section className="pt-12 pb-24 bg-[#0C203B] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-orange-500/5"></div>
         <div className="max-w-7xl mx-auto px-6 relative">
           {/* Back Navigation */}
@@ -158,101 +116,17 @@ const SelfAssessmentPage = () => {
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-slate-400 leading-relaxed mb-4">{feature.description}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{feature.details}</p>
+                <p className="text-slate-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Client Types */}
-      <section className="py-24 bg-[#0C203B]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Who We Help
-              </span>
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Specialized self-assessment services for different client types and situations.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {clientTypes.map((type, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 group hover:transform hover:scale-105">
-                <h3 className="text-lg font-bold text-white mb-3">{type.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{type.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-amber-400 to-orange-300 bg-clip-text text-transparent">
-                Why Choose Us?
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <benefit.icon className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Process Overview */}
-          <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-2xl p-8 border border-amber-500/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Our Self Assessment Process</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  1
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Information Gathering</h4>
-                <p className="text-slate-300 text-sm">Collect all necessary documents and income information.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  2
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Return Preparation</h4>
-                <p className="text-slate-300 text-sm">Professional preparation and review of your tax return.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  3
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Filing & Submission</h4>
-                <p className="text-slate-300 text-sm">Timely electronic filing with HMRC before deadlines.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  4
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Ongoing Support</h4>
-                <p className="text-slate-300 text-sm">Payment planning and ongoing tax advice.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-[#0C203B]">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">

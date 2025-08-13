@@ -1,98 +1,64 @@
-import { Calculator, FileCheck, Calendar, TrendingUp, Shield, CheckCircle2, Clock, ArrowLeft, Target, Users, Award, BookOpen } from 'lucide-react';
+import { Calculator, FileCheck, Calendar, TrendingUp, Shield, CheckCircle2, Clock, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CorporationTaxPage = () => {
   const corporationTaxFeatures = [
     {
       icon: Calculator,
-      title: 'Professional Tax Preparation',
-      description: 'Expert preparation of your corporation tax returns with meticulous attention to detail.',
-      details: 'Our qualified accountants ensure your corporation tax returns are prepared accurately, maximizing allowable deductions and ensuring compliance with HMRC requirements.',
+      title: 'End-to-End Compliance',
+      description: 'Complete preparation and submission of corporation tax returns in line with statutory requirements.',
       gradient: 'from-orange-500 to-red-400'
     },
     {
       icon: FileCheck,
-      title: 'Compliance & Filing',
-      description: 'Timely filing of CT600 returns to meet HMRC deadlines.',
-      details: 'We handle the complete filing process, ensuring your returns are submitted on time and in the correct format, avoiding penalties and interest charges.',
+      title: 'Accurate Tax Computations',
+      description: 'Precise calculation of taxable profits, allowances, and reliefs to ensure full compliance.',
       gradient: 'from-red-500 to-orange-500'
     },
     {
       icon: Calendar,
-      title: 'Tax Planning & Strategy',
-      description: 'Strategic tax planning to minimize your corporation tax liability.',
-      details: 'Proactive tax planning advice to optimize your tax position, including timing of transactions, capital allowances, and available reliefs.',
+      title: 'Tax Planning & Optimization',
+      description: 'Strategic advice to minimize liabilities and maximize available deductions.',
       gradient: 'from-orange-600 to-red-400'
     },
     {
       icon: TrendingUp,
-      title: 'Financial Analysis',
-      description: 'Comprehensive analysis of your company\'s financial position for tax purposes.',
-      details: 'Detailed review of your accounts to identify tax-saving opportunities and ensure optimal use of available allowances and reliefs.',
+      title: 'HMRC/Authority Liaison',
+      description: 'Direct communication and representation with tax authorities on your behalf.',
       gradient: 'from-red-400 to-orange-400'
     },
     {
       icon: Shield,
-      title: 'HMRC Correspondence',
-      description: 'Professional handling of all HMRC communications and enquiries.',
-      details: 'Expert representation in dealing with HMRC, including responding to queries, handling investigations, and managing compliance issues.',
+      title: 'Year-End Review & Adjustments',
+      description: 'Ensuring accounts and returns align with final year-end figures.',
       gradient: 'from-orange-500 to-red-500'
     },
     {
       icon: CheckCircle2,
-      title: 'Record Keeping Support',
-      description: 'Guidance on maintaining proper records for corporation tax purposes.',
-      details: 'Advice on record keeping requirements, digital record keeping, and ensuring your documentation meets HMRC standards.',
+      title: 'Industry-Specific Tax Expertise',
+      description: 'Tailored corporate tax solutions for your sector.',
       gradient: 'from-red-500 to-orange-400'
-    }
-  ];
-
-  const benefits = [
+    },
+    {
+      icon: FileCheck,
+      title: 'Audit-Ready Documentation',
+      description: 'Well-organized records to streamline audits or inspections.',
+      gradient: 'from-orange-600 to-red-500'
+    },
     {
       icon: Clock,
-      title: 'Meet Deadlines',
-      description: 'Never miss corporation tax filing deadlines with our proactive approach.'
-    },
-    {
-      icon: Target,
-      title: 'Minimize Tax',
-      description: 'Maximize allowable deductions and minimize your tax liability legally.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Qualified corporation tax specialists with extensive experience.'
-    },
-    {
-      icon: Award,
-      title: 'Quality Assured',
-      description: 'Multiple review processes ensure accuracy and compliance.'
+      title: 'Proactive Deadline Management',
+      description: 'Tracking key dates to avoid late filing penalties and interest charges.',
+      gradient: 'from-red-400 to-orange-500'
     }
   ];
 
-  const taxTypes = [
-    {
-      title: 'Small Company Rates',
-      description: 'Specialized handling for companies with profits under £250,000'
-    },
-    {
-      title: 'Marginal Relief',
-      description: 'Expert calculation of marginal relief for companies with profits between £250,000 and £1.5 million'
-    },
-    {
-      title: 'Research & Development Credits',
-      description: 'Maximizing R&D tax credits and innovation reliefs'
-    },
-    {
-      title: 'Capital Allowances',
-      description: 'Optimizing capital allowances including Annual Investment Allowance'
-    }
-  ];
+
 
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Hero Section with Back Navigation */}
-      <section className="py-24 bg-[#0C203B] relative overflow-hidden">
+      <section className="pt-12 pb-24 bg-[#0C203B] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-red-500/5"></div>
         <div className="max-w-7xl mx-auto px-6 relative">
           {/* Back Navigation */}
@@ -150,101 +116,17 @@ const CorporationTaxPage = () => {
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-slate-400 leading-relaxed mb-4">{feature.description}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{feature.details}</p>
+                <p className="text-slate-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Tax Specializations */}
-      <section className="py-24 bg-[#0C203B]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Tax Specializations
-              </span>
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Specialized expertise across different aspects of corporation tax.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {taxTypes.map((type, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 group hover:transform hover:scale-105">
-                <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{type.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-400 to-red-300 bg-clip-text text-transparent">
-                Why Choose Us?
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <benefit.icon className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Process Overview */}
-          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-2xl p-8 border border-orange-500/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Our Corporation Tax Process</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  1
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Review & Analysis</h4>
-                <p className="text-slate-300 text-sm">Comprehensive review of your company accounts and transactions.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  2
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Tax Computation</h4>
-                <p className="text-slate-300 text-sm">Detailed corporation tax computation and optimization.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  3
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">CT600 Preparation</h4>
-                <p className="text-slate-300 text-sm">Professional preparation of your CT600 return.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  4
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Filing & Payment</h4>
-                <p className="text-slate-300 text-sm">Timely filing and payment arrangement guidance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-[#0C203B]">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">

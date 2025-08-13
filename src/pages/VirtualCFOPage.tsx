@@ -105,7 +105,7 @@ const VirtualCFOPage = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Hero Section with Back Navigation */}
-      <section className="py-24 bg-[#0C203B] relative overflow-hidden">
+      <section className="pt-12 pb-24 bg-[#0C203B] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5"></div>
         <div className="max-w-7xl mx-auto px-6 relative">
           {/* Back Navigation */}

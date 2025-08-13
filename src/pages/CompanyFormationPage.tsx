@@ -1,109 +1,64 @@
-import { Building, FileCheck, Shield, Users, TrendingUp, Clock, Calendar, ArrowLeft, Target, Award, BookOpen, CheckCircle2 } from 'lucide-react';
+import { Building, FileCheck, Shield, Users, TrendingUp, Clock, Calendar, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CompanyFormationPage = () => {
   const formationFeatures = [
     {
       icon: Building,
-      title: 'Company Registration',
-      description: 'Complete company registration with Companies House.',
-      details: 'Full service company registration including name approval, Articles of Association preparation, and submission to Companies House with guaranteed incorporation.',
+      title: 'Complete Company Incorporation',
+      description: 'End-to-end setup with Companies House, including name registration and legal documentation.',
       gradient: 'from-amber-600 to-orange-600'
     },
     {
-      icon: FileCheck,
-      title: 'Legal Documentation',
-      description: 'All required legal documents and certificates.',
-      details: 'Comprehensive preparation of all incorporation documents, Articles of Association, Memorandum, and obtaining your Certificate of Incorporation.',
+      icon: Users,
+      title: 'Tailored Business Structuring',
+      description: 'Expert advice on shareholding, directorship, and corporate structure to suit your goals.',
       gradient: 'from-orange-600 to-amber-600'
     },
     {
-      icon: Shield,
-      title: 'Compliance Setup',
-      description: 'Ongoing compliance framework establishment.',
-      details: 'Setting up all necessary compliance systems including statutory registers, filing calendars, and ensuring your company meets all legal obligations.',
+      icon: FileCheck,
+      title: 'Articles of Association & Shareholder Agreements',
+      description: 'Drafting and filing customised legal documents.',
       gradient: 'from-amber-500 to-orange-500'
     },
     {
-      icon: Users,
-      title: 'Director & Shareholder Setup',
-      description: 'Proper appointment of directors and shareholders.',
-      details: 'Professional handling of director appointments, share allocations, and ensuring all statutory requirements are met for company officers.',
+      icon: Building,
+      title: 'Registered Office & Company Secretary Services',
+      description: 'Professional address provision and statutory record maintenance.',
       gradient: 'from-orange-500 to-amber-500'
     },
     {
-      icon: TrendingUp,
-      title: 'Business Banking Support',
-      description: 'Assistance with business bank account opening.',
-      details: 'Guidance and support in opening business bank accounts, including preparation of required documentation and introductions to preferred banking partners.',
+      icon: Calendar,
+      title: 'Ongoing Statutory Compliance',
+      description: 'Timely filing of confirmation statements, annual accounts, and other required submissions.',
       gradient: 'from-amber-600 to-orange-500'
     },
     {
-      icon: Clock,
-      title: 'Fast-Track Service',
-      description: 'Same-day and next-day incorporation options.',
-      details: 'Expedited incorporation services available for urgent requirements, including same-day incorporation for immediate business needs.',
-      gradient: 'from-orange-600 to-amber-500'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Target,
-      title: 'Professional Setup',
-      description: 'Expert guidance through the entire incorporation process.'
-    },
-    {
-      icon: Clock,
-      title: 'Quick Turnaround',
-      description: 'Fast incorporation with same-day options available.'
-    },
-    {
       icon: Shield,
-      title: 'Compliance Ready',
-      description: 'All systems set up for ongoing legal compliance.'
+      title: 'Corporate Governance Advisory',
+      description: 'Guidance on directors\' duties, shareholder rights, and company law compliance.',
+      gradient: 'from-orange-600 to-amber-500'
     },
     {
-      icon: Award,
-      title: 'Ongoing Support',
-      description: 'Continued support for all your company needs.'
+      icon: FileCheck,
+      title: 'Record-Keeping Systems',
+      description: 'Setting up secure registers for members, charges, and statutory books.',
+      gradient: 'from-amber-500 to-orange-600'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Regulatory Updates & Alerts',
+      description: 'Proactive monitoring of legislative changes affecting your business.',
+      gradient: 'from-orange-500 to-amber-600'
     }
   ];
 
-  const companyTypes = [
-    {
-      title: 'Private Limited Company',
-      description: 'Standard UK limited company structure for most businesses'
-    },
-    {
-      title: 'Limited by Guarantee',
-      description: 'Suitable for non-profit organizations and social enterprises'
-    },
-    {
-      title: 'Community Interest Company',
-      description: 'Special purpose vehicles for community benefit'
-    },
-    {
-      title: 'Public Limited Company',
-      description: 'For larger companies planning to go public'
-    }
-  ];
 
-  const ongoingServices = [
-    'Annual Return Filing',
-    'Confirmation Statement Submission',
-    'Statutory Register Maintenance',
-    'Director Appointment/Resignation',
-    'Share Transfer Processing',
-    'Registered Office Services',
-    'Company Secretarial Support',
-    'Dormant Company Accounts'
-  ];
 
   return (
     <div className="min-h-screen bg-slate-900">
       {/* Hero Section with Back Navigation */}
-      <section className="py-24 bg-[#0C203B] relative overflow-hidden">
+      <section className="pt-12 pb-24 bg-[#0C203B] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5"></div>
         <div className="max-w-7xl mx-auto px-6 relative">
           {/* Back Navigation */}
@@ -161,121 +116,17 @@ const CompanyFormationPage = () => {
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-slate-400 leading-relaxed mb-4">{feature.description}</p>
-                <p className="text-slate-500 text-sm leading-relaxed">{feature.details}</p>
+                <p className="text-slate-400 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Company Types */}
-      <section className="py-24 bg-[#0C203B]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Company Types We Form
-              </span>
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Different company structures for different business needs.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {companyTypes.map((type, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 group hover:transform hover:scale-105">
-                <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{type.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Ongoing Services */}
-      <section className="py-24 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-orange-400 to-amber-300 bg-clip-text text-transparent">
-                Ongoing Compliance Services
-              </span>
-            </h2>
-            <p className="text-xl text-slate-400 max-w-3xl mx-auto">
-              Continued support to keep your company compliant and in good standing.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {ongoingServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 group hover:transform hover:scale-105 text-center">
-                <h3 className="text-lg font-bold text-white mb-2">{service}</h3>
-              </div>
-            ))}
-          </div>
-
-          {/* Benefits Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                Why Choose Us?
-              </span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-amber-400 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <benefit.icon className="h-10 w-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Process Overview */}
-          <div className="bg-gradient-to-r from-orange-500/10 to-amber-500/10 rounded-2xl p-8 border border-orange-500/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Our Formation Process</h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  1
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Consultation</h4>
-                <p className="text-slate-300 text-sm">Initial consultation to understand your business needs.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  2
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Documentation</h4>
-                <p className="text-slate-300 text-sm">Preparation of all required incorporation documents.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  3
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Incorporation</h4>
-                <p className="text-slate-300 text-sm">Submission to Companies House and incorporation.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">
-                  4
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Ongoing Support</h4>
-                <p className="text-slate-300 text-sm">Continued compliance and secretarial services.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-[#0C203B]">
+      <section className="py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
