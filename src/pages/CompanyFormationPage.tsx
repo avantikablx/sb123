@@ -17,13 +17,13 @@ const CompanyFormationPage = () => {
     },
     {
       icon: FileCheck,
-      title: 'Articles of Association & Shareholder Agreements',
+      title: 'Articles of Association and Shareholder Agreements',
       description: 'Drafting and filing customised legal documents.',
       gradient: 'from-amber-500 to-orange-500'
     },
     {
       icon: Building,
-      title: 'Registered Office & Company Secretary Services',
+      title: 'Registered Office and Company Secretary Services',
       description: 'Professional address provision and statutory record maintenance.',
       gradient: 'from-orange-500 to-amber-500'
     },
@@ -47,7 +47,7 @@ const CompanyFormationPage = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Regulatory Updates & Alerts',
+      title: 'Regulatory Updates and Alerts',
       description: 'Proactive monitoring of legislative changes affecting your business.',
       gradient: 'from-orange-500 to-amber-600'
     }

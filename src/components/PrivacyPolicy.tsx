@@ -63,7 +63,7 @@ const PrivacyPolicy = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">4. Data Storage and Security</h3>
                   <p className="text-slate-300">
-                    Data is stored securely on encrypted cloud-based systems. Access is restricted to authorized personnel only.
+                    Data is stored securely on encrypted cloud-based systems. Access is restricted to authorised personnel only.
                   </p>
                 </div>
 

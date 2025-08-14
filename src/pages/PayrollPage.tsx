@@ -23,13 +23,13 @@ const PayrollPage = () => {
     },
     {
       icon: TrendingUp,
-      title: 'Employee Benefits & Allowances',
+      title: 'Employee Benefits and Allowances',
       description: 'Managing taxable benefits, pensions, bonuses, and reimbursements.',
       gradient: 'from-yellow-400 to-amber-500'
     },
     {
       icon: FileCheck,
-      title: 'Payslip Generation & Distribution',
+      title: 'Payslip Generation and Distribution',
       description: 'Secure, compliant, and timely issuance of payslips.',
       gradient: 'from-amber-500 to-yellow-600'
     },

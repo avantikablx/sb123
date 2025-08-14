@@ -67,7 +67,7 @@ const About = () => {
                   <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">SME Focused</h4>
-                <p className="text-xs text-slate-400">Built for startups & SMEs</p>
+                <p className="text-xs text-slate-400">Built for startups and SMEs</p>
               </div>
             </div>
           </div>

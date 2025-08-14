@@ -70,7 +70,7 @@ const Pricing = () => {
       price: "£320",
       period: "/month",
       description:
-        "Perfect for growing businesses needing personalized service",
+        "Perfect for growing businesses needing personalised service",
       features: [
         "Monthly reports and accounts management",
         "Personal accountant",

@@ -5,19 +5,19 @@ const VATPage = () => {
   const vatFeatures = [
     {
       icon: FileText,
-      title: 'Hassle-Free Registration & Advisory',
+      title: 'Hassle-Free Registration and Advisory',
       description: 'Complete guidance and setup, ensuring you\'re registered correctly from day one.',
       gradient: 'from-blue-500 to-cyan-400'
     },
     {
       icon: TrendingUp,
       title: 'Smart VAT Optimization',
-      description: 'Ethical strategies to legally reduce VAT liability and maximize reclaim opportunities.',
+      description: 'Ethical strategies to legally reduce VAT liability and maximise reclaim opportunities.',
       gradient: 'from-blue-600 to-cyan-500'
     },
     {
       icon: CheckCircle2,
-      title: 'Accurate & Transparent Calculations',
+      title: 'Accurate and Transparent Calculations',
       description: 'Eliminating costly errors while keeping records audit-ready.',
       gradient: 'from-cyan-500 to-blue-400'
     },
@@ -29,8 +29,8 @@ const VATPage = () => {
     },
     {
       icon: BarChart3,
-      title: 'VAT Strategy & Optimization',
-      description: 'Structuring transactions to maximize reclaim opportunities and improve cash flow.',
+      title: 'VAT Strategy and Optimisation',
+      description: 'Structuring transactions to maximise reclaim opportunities and improve cash flow.',
       gradient: 'from-cyan-600 to-blue-500'
     },
     {

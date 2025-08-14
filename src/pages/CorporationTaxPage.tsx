@@ -17,8 +17,8 @@ const CorporationTaxPage = () => {
     },
     {
       icon: Calendar,
-      title: 'Tax Planning & Optimization',
-      description: 'Strategic advice to minimize liabilities and maximize available deductions.',
+      title: 'Tax Planning and Optimisation',
+      description: 'Strategic advice to minimise liabilities and maximise available deductions.',
       gradient: 'from-orange-600 to-red-400'
     },
     {
@@ -29,7 +29,7 @@ const CorporationTaxPage = () => {
     },
     {
       icon: Shield,
-      title: 'Year-End Review & Adjustments',
+      title: 'Year-End Review and Adjustments',
       description: 'Ensuring accounts and returns align with final year-end figures.',
       gradient: 'from-orange-500 to-red-500'
     },

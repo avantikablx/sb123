@@ -5,7 +5,7 @@ const WhyChooseUs = () => {
   const reasons = [
     {
       icon: Shield,
-      title: 'Trusted & Secure',
+      title: 'Trusted and Secure',
       description: 'Bank-level security and confidentiality. Your financial data is protected with the highest standards of cybersecurity.'
     },
     {

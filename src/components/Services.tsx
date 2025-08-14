@@ -11,7 +11,7 @@ const Services = () => {
     },
     {
       icon: FileText,
-      title: 'VAT Registration & Filing',
+      title: 'VAT Registration and Filing',
       description: 'VAT registration assistance and regular filing to keep you compliant with HMRC.',
       gradient: 'from-amber-600 to-orange-500'
     },
@@ -35,7 +35,7 @@ const Services = () => {
     },
     {
       icon: Building,
-      title: 'Limited Company Formation & Compliance',
+      title: 'Limited Company Formation and Compliance',
       description: 'Company formation services and ongoing compliance management.',
       gradient: 'from-amber-600 to-orange-600'
     }
@@ -96,17 +96,16 @@ const Services = () => {
                 switch (title) {
                   case 'Bookkeeping':
                     return '/bookkeeping';
-                  case 'VAT Registration & Filing':
+                  case 'VAT Registration and Filing':
                     return '/vat';
-                  // Temporarily disabled other core services
-                  // case 'Corporation Tax Returns':
-                  //   return '/corporation-tax';
-                  // case 'Payroll (PAYE) Management':
-                  //   return '/payroll';
-                  // case 'Self-Assessment Filing':
-                  //   return '/self-assessment';
-                  // case 'Limited Company Formation & Compliance':
-                  //   return '/company-formation';
+                  case 'Corporation Tax Returns':
+                    return '/corporation-tax';
+                  case 'Payroll (PAYE) Management':
+                    return '/payroll';
+                  case 'Self-Assessment Filing':
+                    return '/self-assessment';
+                  case 'Limited Company Formation and Compliance':
+                    return '/company-formation';
                   default:
                     return '#';
                 }

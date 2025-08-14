@@ -19,7 +19,7 @@ const UKAddressPage = () => {
     },
     {
       icon: Mail,
-      title: 'Mail Handling & Forwarding',
+      title: 'Mail Handling and Forwarding',
       description: 'Professional mail management and forwarding services.',
       details: 'Secure handling of all business mail with options for forwarding, scanning, or collection, ensuring you never miss important correspondence.',
       gradient: 'from-amber-600 to-orange-500'

@@ -42,7 +42,7 @@ const BankAccountPage = () => {
       icon: Clock,
       title: 'Fast-Track Service',
       description: 'Expedited account opening where possible.',
-      details: 'Accelerated processing through our banking relationships and comprehensive preparation to minimize delays.',
+      details: 'Accelerated processing through our banking relationships and comprehensive preparation to minimise delays.',
       gradient: 'from-orange-500 to-amber-500'
     }
   ];
@@ -91,7 +91,7 @@ const BankAccountPage = () => {
   const accountTypes = [
     'Business Current Accounts',
     'Multi-Currency Accounts',
-    'Savings & Deposit Accounts',
+    'Savings and Deposit Accounts',
     'Credit Facilities',
     'Merchant Services',
     'Corporate Credit Cards'

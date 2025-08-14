@@ -23,14 +23,14 @@ const BookkeepingPage = () => {
     },
     {
       icon: Calendar,
-      title: 'Budgeting & Forecasting Support',
+      title: 'Budgeting and Forecasting Support',
       description: 'Data-driven insights to plan growth and manage resources effectively.',
       gradient: 'from-amber-500 to-yellow-400'
     },
     {
       icon: DollarSign,
       title: 'Cash Flow Management',
-      description: 'Monitoring inflows/outflows to optimize liquidity.',
+      description: 'Monitoring inflows/outflows to optimise liquidity.',
       gradient: 'from-orange-600 to-amber-500'
     },
     {
@@ -42,7 +42,7 @@ const BookkeepingPage = () => {
     {
       icon: Shield,
       title: 'Industry-Specific Bookkeeping',
-      description: 'Customized systems for your sector\'s unique requirements.',
+      description: 'Customised systems for your sector\'s unique requirements.',
       gradient: 'from-amber-500 to-orange-400'
     }
   ];

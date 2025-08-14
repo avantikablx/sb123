@@ -11,7 +11,7 @@ const SelfAssessmentPage = () => {
     },
     {
       icon: Calculator,
-      title: 'Income & Expense Analysis',
+      title: 'Income and Expense Analysis',
       description: 'Detailed review of all income sources and allowable expenses to ensure correct reporting.',
       gradient: 'from-amber-500 to-orange-600'
     },
@@ -29,7 +29,7 @@ const SelfAssessmentPage = () => {
     },
     {
       icon: Clock,
-      title: 'Deadline & Penalty Protection',
+      title: 'Deadline and Penalty Protection',
       description: 'Proactive scheduling to avoid late filing charges or interest.',
       gradient: 'from-orange-600 to-amber-600'
     },

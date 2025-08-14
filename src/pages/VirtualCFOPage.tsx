@@ -40,9 +40,9 @@ const VirtualCFOPage = () => {
     },
     {
       icon: DollarSign,
-      title: 'Investment & Funding',
+      title: 'Investment and Funding',
       description: 'Support with investment and funding strategies.',
-      details: 'Expert guidance on raising capital, investor relations, due diligence support, and optimizing capital structure for growth.',
+      details: 'Expert guidance on raising capital, investor relations, due diligence support, and optimising capital structure for growth.',
       gradient: 'from-amber-500 to-orange-400'
     }
   ];
